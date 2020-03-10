@@ -1,0 +1,26 @@
+{
+  "name": "lc-update-server",
+  "version": "1.0.2",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "test": "node test.js"
+  },
+  "repository": "git@github.com:lazycoffee/lc-update-server.git",
+  "author": "JamesYin <elantion@sina.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/command-line-args": "^5.0.0",
+    "@types/fs-extra": "^8.1.0",
+    "@types/node": "^13.9.0",
+    "@types/ssh2": "^0.5.40",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "fs-extra": "^8.1.0",
+    "ssh2": "^0.8.8"
+  }
+}
