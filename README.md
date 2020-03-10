@@ -34,3 +34,6 @@ const config = {
 };
 module.exports = config;
 ```
+
+## LICENSE
+MIT. See LICENSE for more detail.
