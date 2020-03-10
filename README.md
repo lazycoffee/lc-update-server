@@ -34,6 +34,7 @@ const config = {
 };
 module.exports = config;
 ```
+Now, you can use ```lc-update-server``` command to refresh static files.
 
 ## LICENSE
 MIT. See LICENSE for more detail.
