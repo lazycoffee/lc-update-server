@@ -38,3 +38,8 @@ Now, you can use ```lc-update-server``` command to refresh static files.
 
 ## LICENSE
 MIT. See LICENSE for more detail.
+
+
+## Changelog
+
+[x] 移除删除文件夹的行为，已经有解压缩覆盖行为了。

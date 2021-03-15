@@ -35,11 +35,9 @@ import config from './getConfig';
             throw new Error('For security reason, you can not use "/" or "" in zip file name.');
         }
         const remoteZipPath = path.join(remotePath, zipFileName);
-        const remoteResource = path.join(remotePath, config.upload.cleanPath);
         exec(sshOption, [
             `cd ${remotePath}`,
             'pwd',
-            `rm -rf ${remoteResource}`,
             `unzip -o ${remoteZipPath} -d ${remotePath}`,
             `rm ${remoteZipPath}`,
         ]);
