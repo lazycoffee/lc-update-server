@@ -55,7 +55,7 @@ var exec = function (connection, command) {
         connection.exec(command, function (error, stream) {
             stream.on('close', function (code, signal) {
                 console.log('Stream :: code: ' + code + ', signal: ' + signal);
-                resolve();
+                resolve(null);
             }).on('data', function (data) {
                 console.log('STDOUT: ' + data);
             }).stderr.on('data', function (data) {

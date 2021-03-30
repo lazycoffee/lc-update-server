@@ -47,7 +47,7 @@ var exec_1 = __importDefault(require("./exec"));
 var getConfig_1 = __importDefault(require("./getConfig"));
 (function () {
     return __awaiter(this, void 0, void 0, function () {
-        var cwd, sshOption, rootPath, targetPath, zipPath, zipFileName, remotePath, uploadRes, remoteZipPath, remoteResource;
+        var cwd, sshOption, rootPath, targetPath, zipPath, zipFileName, remotePath, uploadRes, remoteZipPath;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -81,11 +81,9 @@ var getConfig_1 = __importDefault(require("./getConfig"));
                             throw new Error('For security reason, you can not use "/" or "" in zip file name.');
                         }
                         remoteZipPath = path_1["default"].join(remotePath, zipFileName);
-                        remoteResource = path_1["default"].join(remotePath, getConfig_1["default"].upload.cleanPath);
                         exec_1["default"](sshOption, [
                             "cd " + remotePath,
                             'pwd',
-                            "rm -rf " + remoteResource,
                             "unzip -o " + remoteZipPath + " -d " + remotePath,
                             "rm " + remoteZipPath,
                         ]);

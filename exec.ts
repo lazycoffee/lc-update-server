@@ -15,7 +15,7 @@ const exec = function(connection: Connection, command: string){
         (connection as any).exec(command, (error: Error, stream: any)=>{
             stream.on('close', function(code: string, signal: string) {
                 console.log('Stream :: code: ' + code + ', signal: ' + signal);
-                resolve();
+                resolve(null);
               }).on('data', function(data: string) {
                 console.log('STDOUT: ' + data);
               }).stderr.on('data', function(data: string) {
